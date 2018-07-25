@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/segundo.css"/>
+	<script language="javascript" type="text/javascript"  src="jison/calculator.js"></script>
+  <script language="javascript" type="text/javascript"  src="gramati1p/g1p.js"></script>
+  <script language="javascript" type="text/javascript"  src="gramati1p/fun1p.js"></script>
+	<title>Editor de texto</title>
+</head>
+<body>
+<header>
+   <h1>Editor de Texto</h1>
+</header>
+<script >
+ 	//alert(calculator.parse("2^32/1024"));
+</script>
+
+<div class="Principal"; style="text-align:center; background:#05A277";>
+	<div class="tab" align="center">
+  		<button class="tablinks" onclick="mensaje()">Compilar</button>
+  		<button class="tablinks" >Debuguear</button>
+  		<button class="tablinks" >Continuar</button>
+  		<button class="tablinks" >Siguiente</button>
+  		<button class="tablinks" >Saltar</button>
+  		<button class="tablinks" >Automatico</button>
+  		<button class="tablinks" >Exportar</button>
+	</div>
+<br><br>
+<div style="width:100%; height:600px;">
+    <textarea type="text" id="txt_editor" style="width:50%; height:600px;";> 
+    </textarea>
+    <textarea type="text" id="txt_codigo" style="width:49%; height:600px;";> 
+    </textarea>
+</div>
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Consola')">Consola</button>
+  <button class="tablinks" onclick="openCity(event, 'tb')">Tabla de Simbolos</button>
+  <button class="tablinks" onclick="openCity(event, 'errores')">Errores</button>
+  <button class="tablinks" onclick="openCity(event, 'stack')">Stack</button>
+  <button class="tablinks" onclick="openCity(event, 'heap')">Heap</button>
+</div>
+
+<!-- Tab content -->
+<div id="Consola" class="tabcontent">
+		
+  <textarea type="text" id="txt_consola" style="width:100%; height:200px;";> 
+  	</textarea>
+</div>
+
+<div id="tb" class="tabcontent">
+  <textarea type="text" id="txt_tb" style="width:100%; height:200px;";> 
+  	</textarea>
+</div>
+
+<div id="errores" class="tabcontent">
+  <textarea type="text" id="txt_errores" style="width:100%; height:200px;";> 
+  	</textarea>
+</div>
+
+<div id="stack" class="tabcontent">
+  <textarea type="text" id="txt_stack" style="width:100%; height:200px;";> 
+  	</textarea>
+</div>
+
+<div id="heap" class="tabcontent">
+  <textarea type="text" id="txt_heap" style="width:100%; height:200px;";> 
+  	</textarea>
+</div>
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<footer>Estudiante: James Melgar Carne: 201314716</footer>
+
+</div>
+</body>
+</html>
